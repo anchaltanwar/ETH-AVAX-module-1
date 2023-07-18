@@ -41,3 +41,6 @@ The `ErrorHandling` contract provides the following functions:
 2. Compile and deploy the `ErrorHandling` contract to a supported Ethereum network.
 3. Interact with the deployed contract by calling the available functions and providing the required parameters.
 
+## Explanation Video
+
+https://www.loom.com/share/937067c5e78b462dad499bd9ab985209?sid=a47f142d-1806-4596-b02b-6116fecc970a
