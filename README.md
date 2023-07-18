@@ -44,3 +44,6 @@ The `ErrorHandling` contract provides the following functions:
 ## Explanation Video
 
 https://www.loom.com/share/937067c5e78b462dad499bd9ab985209?sid=a47f142d-1806-4596-b02b-6116fecc970a
+
+## Author
+@Anchal
