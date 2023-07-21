@@ -8,7 +8,7 @@ This contract uses the MIT License.
 
 ## Prerequisites
 
-- Solidity ^0.8.17
+- Solidity ^0.8.0
 
 ## Contract Details
 
@@ -44,7 +44,7 @@ The `ErrorHandlingContract` contract provides the following functions:
 
 ## Usage
 
-1. Make sure you have Solidity ^0.8.17 installed.
+1. Make sure you have Solidity ^0.8.0 installed.
 2. Compile and deploy the `ErrorHandlingContract` contract to a supported Ethereum network.
 3. Interact with the deployed contract by calling the available functions and providing the required parameters.
 
