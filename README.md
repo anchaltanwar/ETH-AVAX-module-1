@@ -1,60 +1,38 @@
-# ErrorHandling Contract
+# Error Handling Smart Contract
 
-This Solidity smart contract demonstrates different error handling techniques using `assert`, `revert`, and `require` functions.
+This Solidity smart contract demonstrates various error handling mechanisms using the `require`, `revert`, and `assert` statements. The contract allows for checking balances, performing transactions, and calculating quotients while ensuring data integrity and preventing unexpected behavior.
 
-## License
+## Getting Started
 
-This contract uses the MIT License.
+Follow these steps to deploy and interact with the error handling smart contract:
 
-## Prerequisites
+1. **Prerequisites**: Make sure you have the required development environment set up, including the Solidity compiler.
 
-- Solidity ^0.8.0
+2. **Deployment**: Deploy the contract to your preferred Ethereum development environment or network.
 
-## Contract Details
+3. **Interacting with the Contract**:
+   - Use the provided functions to test different error handling scenarios:
+     - `check(uint balance, uint coins)`: Increments `amount` and checks if `balance` is greater than or equal to 10 using the `require` statement.
+     - `RevertCheck(uint balance, uint coins)`: Increments `amount` and checks if `balance` is less than 10 using an `if` condition and the `revert` statement.
+     - `AssertCheck(uint i, uint j)`: Uses the `assert` statement to validate that `j` is not equal to 0, then calculates the quotient of `i` divided by `j`.
 
-The `ErrorHandlingContract` contract provides the following functions:
+## Functions
 
-### deposit(uint amount)
+### `check(uint balance, uint coins)`
 
+Increments the `amount` by adding the value of `coins`. Checks if the `balance` is greater than or equal to 10 using the `require` statement. If the condition is not met, the transaction reverts with a custom error message.
 
--  This function demonstrates the usage of the `require` function.
--  This function takes the amount as input from the user.
--  Then add it to the balance
+### `RevertCheck(uint balance, uint coins)`
 
-### withdraw(uint amount)
+Increments the `amount` by adding the value of `coins`. Checks if the `balance` is less than 10 using an `if` condition. If the condition is true, the transaction reverts with a custom error message using the `revert` statement.
 
-- This function demonstrates the usage of the `require` function.
-- This takes the amount as input.
-- Then reduces it from the total balance.
+### `AssertCheck(uint i, uint j)`
 
-### assertExample(uint a, uint b)
+Uses the `assert` statement to validate that `j` is not equal to 0. If the assertion fails, the transaction reverts. Calculates the quotient of `i` divided by `j` and stores it in the `quotient` variable.
 
-- This function demonstrates the usage of `assert`.
-- Takes a and b as input from the user.
-- Performs the division.
-  
-
-### revertExample(uint a, uint b)
-- This function demonstrates the usage of the `revert` function.
-- Takes a and b as input from the user.
-- Performs the division.
-
-### getBalance()
-- This function shows the total balance.
-
-## Usage
-1. Make sure you have Solidity ^0.8.0 installed.
-2. Compile and deploy the `ErrorHandlingContract` contract to a supported Ethereum network.
-3. Interact with the deployed contract by calling the available functions and providing the required parameters.
-
-## Contributing
-If you want to contribute to this project, feel free to submit issues or pull requests. Your contributions are always welcome.
+## Author
+Anchal Tanwar
 
 ## License
-This project is licensed under the MIT License.
 
-## Contact
-If you have any questions or suggestions, please feel free to contact us:
-
-- Email: anchaltanwar89@gmail.com
-
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
