@@ -1,37 +1,33 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity 0.8.18;
+//creating a contract
+contract errorhandling{
+    uint public amount=0;
+    uint public quotient=0;
 
-contract ErrorHandlingContract {
-    address private _owner;
-    uint private _balance;
-
-    constructor() {
-        _owner = msg.sender;
+    //creating a function with name RequireCheck and parameters balance and coins 
+    function check(uint balance, uint coins) public payable  {
+        amount+=coins;
+        //using require function and giving it a condition
+        require(balance>=10,"Sorry!! balance is less than 10. Transaction is not possible");
     }
 
-    function deposit(uint amount) public {
-        require(amount > 0, "Amount should be greater than 0");
-        _balance += amount;
+    error Throw_error(string);
+    //creating another function 
+    function RevertCheck(uint balance, uint coins)public payable  {
+        amount+=coins;
+        //using if conditon and using revert function inside the if condition
+        if(balance<10)
+            revert Throw_error("Balance is less than 10. Transaction is not possible");
     }
 
-    function withdraw(uint amount) public {
-        require(msg.sender == _owner, "Only the owner can withdraw");
-        require(amount > 0, "Amount should be greater than 0");
-        require(_balance >= amount, "Insufficient balance");
-        _balance -= amount;
-    }
+    //creating a function and using an assert function inside it
+    function AssertCheck(uint i, uint j) public {
+        assert(j!=0);
 
-    function assertExample(uint a, uint b) public pure returns (uint) {
-        assert(b != 0); // Ensure b is not zero to avoid division by zero
-        return a / b;
-    }
+        quotient=i/j;
 
-    function revertExample(uint a, uint b) public pure returns (uint) {
-        require(b != 0, "Cannot divide by zero");
-        return a / b;
     }
+    
 
-    function getBalance() public view returns (uint) {
-        return _balance;
-    }
 }
