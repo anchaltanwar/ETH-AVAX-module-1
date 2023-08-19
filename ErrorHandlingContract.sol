@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
 //creating a contract
-contract errorhandling{
+contract ErrorHandlingContract{
     uint public amount=0;
     uint public quotient=0;
 
